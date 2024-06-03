@@ -25,6 +25,8 @@ class Column
 
     protected string|null $headerClass = null;
 
+    protected string|null $cellClass = null;
+
     protected Closure|null $searchableClosure = null;
 
     protected Closure|AbstractFormatter|null $formatter = null;
@@ -127,6 +129,18 @@ class Column
     public function getHeaderClass(): string|null
     {
         return $this->headerClass;
+    }
+
+    public function cellClass(string $cellClass): self
+    {
+        $this->cellClass = $cellClass;
+
+        return $this;
+    }
+
+    public function getCellClass(): string|null
+    {
+        return $this->cellClass;
     }
 
     public function getSearchableClosure(): Closure|null
