@@ -131,7 +131,7 @@ class Column
         return $this->headerClass;
     }
 
-    public function cellClass(string $cellClass): self
+    public function cellClass(?string $cellClass): self
     {
         $this->cellClass = $cellClass;
 
